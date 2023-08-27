@@ -2,6 +2,7 @@ from inputs import inputs
 from list import lists
 from numbers import num
 from variables import var
+from range import ex1range, ex2range
 
 # from and imports only 'activate' once given function in script that refrences it
 # Otherwise, function causes error
@@ -10,7 +11,7 @@ def main():
     print('Hello, World!!!')
 
 def programs():
-    program = ("inputs", 'list', 'main', 'numbers', 'variables')
+    program = ("inputs", 'list', 'main', 'numbers', 'range', 'variables')
     print(program)
     choice = input(f'Select a program from the list above: ')
 
@@ -25,6 +26,13 @@ def programs():
 
     if choice == "numbers":
         num()
+
+    if choice == "range":
+        c1r = input(f'Choose: ex1range, ex2range: ')
+        if c1r == "ex1range":
+            ex1range()
+        if c1r == "ex2range":
+            ex2range()
 
     if choice == "variables":
         var()
