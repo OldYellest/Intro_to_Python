@@ -3,8 +3,8 @@ from list import lists
 from numbers import num
 from variables import var
 
-#from and imports only 'activate' once given function in script that refrences it
-#Otherwise, function causes error
+# from and imports only 'activate' once given function in script that refrences it
+# Otherwise, function causes error
 
 def main():
     print('Hello, World!!!')
