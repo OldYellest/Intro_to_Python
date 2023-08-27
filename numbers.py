@@ -26,8 +26,8 @@ def num():
     print(f'The sum of {float_variable} and {integer_variable} '
           f'converted to integer is: {int(float_variable + integer_variable)}')
 
-#Any math involvin a float operand will always produce a float result,
-#unless converted to integer explicitly
+# Any math involving a float operand will always produce a float result,
+# unless converted to integer explicitly
 
     print(f'The absolute value of {num_3} is: {abs(num_3)}')
 
@@ -36,4 +36,4 @@ def num():
     print(f'{3} to the power of {4} is: {pow(3, 4)}')
     print(f'{3} to the power of {4} is: {3 ** 4}')
 
-#Both methods produce "power of" math
+# Both methods produce "power of" math
