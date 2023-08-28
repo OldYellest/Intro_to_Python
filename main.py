@@ -4,7 +4,7 @@ from numbers import num
 from variables import var
 from range import ex1range, ex2range
 from index import exindex
-from for_while import exfor, exwhile, exloop
+from for_while import exfor, exwhile, exloop, whileloop
 
 # from and imports only 'activate' once given function in script that refrences it
 # Otherwise, function causes error
@@ -18,13 +18,15 @@ def programs():
     choice = input(f'Select a program from the list above: ')
 
     if choice == "for_while":
-        c1r = input(f'Choose: exfor, exwhile, exloop: ')
+        c1r = input(f'Choose: exfor, exwhile, exloop, whileloop: ')
         if c1r == "exfor":
             exfor()
         if c1r == "exwhile":
             exwhile()
         if c1r == "exloop":
             exloop()
+        if c1r == "whileloop":
+            whileloop()
 
     if choice == "index":
         exindex()
