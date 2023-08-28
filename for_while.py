@@ -23,7 +23,6 @@ def exwhile():
         number += 1
 
 # while loops until condition is satisfied
-
 def exloop():
     for x in range(1, 8):
         print()
@@ -32,3 +31,15 @@ def exloop():
 
 # x prints the table with each y in the y range as
 # x continues down the x range. Remember range is one less than last digit
+
+def whileloop():
+    m = 1
+    for g in range(1, 3):
+        print()
+        while m < 10:
+            print(f'{m} + {g} = {m + g}')
+            m += 1
+        for m in range(10):
+            m += 1
+
+# Needs work, will come back to later
