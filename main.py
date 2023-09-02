@@ -5,15 +5,16 @@ from variables import var
 from range import ex1range, ex2range
 from index import exindex
 from for_while import exfor, exwhile, exloop, whileloop
+from in_op import exin
+from plus import plus, mult
+from length import length
 
 # from and imports only 'activate' once given function in script that refrences it
 # Otherwise, function causes error
-
 def main():
     print('Hello, World!!!')
-
 def programs():
-    program = ("for_while", "index", "inputs", 'list', 'main', 'numbers', 'range', 'variables')
+    program = ("for_while", "in_op", "index", "inputs", 'list', 'length', 'main', 'numbers', 'plus', 'range', 'variables')
     print(program)
     choice = input(f'Select a program from the list above: ')
 
@@ -28,11 +29,17 @@ def programs():
         if c1r == "whileloop":
             whileloop()
 
+    if choice == "in_op":
+        exin()
+
     if choice == "index":
         exindex()
 
     if choice == "inputs":
         inputs()
+
+    if choice == "length":
+        length()
 
     if choice == "list":
         lists()
@@ -42,6 +49,13 @@ def programs():
 
     if choice == "numbers":
         num()
+
+    if choice == "plus":
+        c1r = input(f'Choose: plus, mult: ')
+        if c1r == "plus":
+            plus()
+        if c1r == "mult":
+            mult()
 
     if choice == "range":
         c1r = input(f'Choose: ex1range, ex2range: ')
@@ -57,5 +71,3 @@ if __name__ == '__main__':
     programs()
 
 # "if __name___" function tells IDE that this script is for execution and not for importing into other files
-
-
