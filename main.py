@@ -8,15 +8,19 @@ from for_while import exfor, exwhile, exloop, whileloop
 from in_op import exin
 from plus import plus, mult
 from length import length
+from captial import capital
 
 # from and imports only 'activate' once given function in script that refrences it
 # Otherwise, function causes error
 def main():
     print('Hello, World!!!')
 def programs():
-    program = ("for_while", "in_op", "index", "inputs", 'list', 'length', 'main', 'numbers', 'plus', 'range', 'variables')
+    program = ("capital", "for_while", "in_op", "index", "inputs", 'list', 'length', 'main', 'numbers', 'plus', 'range', 'variables')
     print(program)
     choice = input(f'Select a program from the list above: ')
+
+    if choice == "capital":
+        capital()
 
     if choice == "for_while":
         c1r = input(f'Choose: exfor, exwhile, exloop, whileloop: ')
