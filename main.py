@@ -9,13 +9,15 @@ from in_op import exin
 from plus import plus, mult
 from length import length
 from captial import capital
+from lower import lower
 
 # from and imports only 'activate' once given function in script that refrences it
 # Otherwise, function causes error
 def main():
     print('Hello, World!!!')
 def programs():
-    program = ("capital", "for_while", "in_op", "index", "inputs", 'list', 'length', 'main', 'numbers', 'plus', 'range', 'variables')
+    program = (f"""Choose from the following programs: "capital", "for_while", "in_op", "index", "inputs", 
+    'list', 'lower', 'length', 'main', 'numbers', 'plus', 'range', 'variables'""")
     print(program)
     choice = input(f'Select a program from the list above: ')
 
@@ -47,6 +49,9 @@ def programs():
 
     if choice == "list":
         lists()
+
+    if choice == "lower":
+        lower()
 
     if choice == "main":
         main()
