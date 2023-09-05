@@ -10,6 +10,7 @@ from plus import plus, mult
 from length import length
 from captial import capital
 from lower import lower
+from stringex import excount, saw, glue
 
 # from and imports only 'activate' once given function in script that refrences it
 # Otherwise, function causes error
@@ -17,7 +18,7 @@ def main():
     print('Hello, World!!!')
 def programs():
     program = (f"""Choose from the following programs: "capital", "for_while", "in_op", "index", "inputs", 
-    'list', 'lower', 'length', 'main', 'numbers', 'plus', 'range', 'variables'""")
+    'list', 'lower', 'length', 'main', 'numbers', 'plus', 'range', 'stringex', 'variables'""")
     print(program)
     choice = input(f'Select a program from the list above: ')
 
@@ -72,6 +73,15 @@ def programs():
             ex1range()
         if c1r == "ex2range":
             ex2range()
+
+    if choice == "stringex":
+        c1r = input(f'Choose: excount, saw, glue: ')
+        if c1r == "excount":
+            excount()
+        if c1r == "saw":
+            saw()
+        if c1r == "glue":
+            glue()
 
     if choice == "variables":
         var()
