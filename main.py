@@ -1,26 +1,29 @@
-from inputs import inputs
-from list import lists
-from numbers import num
-from variables import var
-from range import ex1range, ex2range
-from index import exindex
+from bool import numcheck, yearcheck, primecheck
+from captial import capital
 from for_while import exfor, exwhile, exloop, whileloop
 from in_op import exin
-from plus import plus, mult
+from index import exindex
+from inputs import inputs
 from length import length
-from captial import capital
+from list import lists
 from lower import lower
+from numbers import num, addrange
+from plus import plus, mult
+from range import ex1range, ex2range
+from rpg import skills, castle, opposite
+from setex import ex1, ex2, ex3
 from stringex import excount, saw, glue
-from bool import numcheck, yearcheck, primecheck
+from variables import var
 
 # from and imports only 'activate' once given function in script that references it
 # Otherwise, function causes error
 def main():
     print('Hello, World!!!')
 def programs():
-    program = (f"""Choose from the following programs:\n ~ bool, capital, for_while, in_op, index,\n ~ inputs, list, lower, length, main,\n ~ numbers, plus, range, stringex, variables""")
+    program = (f"""Choose from the following programs:\n ~ bool, capital, for_while, in_op,\n ~ index, inputs, list, lower, length,\n ~ main, numbers, plus, range, rpg,\n ~ setex, stringex, variables""")
     print(program)
     choice = input(f'Select a program from the list above: ')
+
 
     if choice == "bool":
         c1r = input(f'Choose: numcheck, yearcheck, primecheck: ')
@@ -30,12 +33,10 @@ def programs():
             yearcheck()
         elif c1r == "primecheck":
             primecheck()
-        #if c1r == "whileloop":
-         #   whileloop()
         else:
             return
 
-    if choice == "capital":
+    elif choice == "capital":
         capital()
 
     if choice == "for_while":
@@ -49,45 +50,67 @@ def programs():
         if c1r == "whileloop":
             whileloop()
 
-    if choice == "in_op":
+    elif choice == "in_op":
         exin()
 
-    if choice == "index":
+    elif choice == "index":
         exindex()
 
-    if choice == "inputs":
+    elif choice == "inputs":
         inputs()
 
-    if choice == "length":
+    elif choice == "length":
         length()
 
-    if choice == "list":
+    elif choice == "list":
         lists()
 
-    if choice == "lower":
+    elif choice == "lower":
         lower()
 
-    if choice == "main":
+    elif choice == "main":
         main()
 
-    if choice == "numbers":
-        num()
+    elif choice == "numbers":
+        c1r = input(f'Choose: num, addrange: ')
+        if c1r == "num":
+            num()
+        if c1r == "addrange":
+            addrange()
 
-    if choice == "plus":
+    elif choice == "plus":
         c1r = input(f'Choose: plus, mult: ')
         if c1r == "plus":
             plus()
         if c1r == "mult":
             mult()
 
-    if choice == "range":
+    elif choice == "range":
         c1r = input(f'Choose: ex1range, ex2range: ')
         if c1r == "ex1range":
             ex1range()
         if c1r == "ex2range":
             ex2range()
 
-    if choice == "stringex":
+    elif choice == "rpg":
+        c1r = input(f'Choose: skills, castle, opposite: ')
+        if c1r == "skills":
+            skills()
+        if c1r == "castle":
+            castle()
+        if c1r == "opposite":
+            opposite()
+
+    elif choice == "setex":
+        c1r = input(f'Choose: ex1, ex2, ex3: ')
+        if c1r == "ex1":
+            ex1()
+        elif c1r == "ex2":
+            ex2()
+        elif c1r == "ex3":
+            ex3()
+
+    elif choice == "stringex":
         c1r = input(f'Choose: excount, saw, glue: ')
         if c1r == "excount":
             excount()
@@ -96,10 +119,11 @@ def programs():
         if c1r == "glue":
             glue()
 
-    if choice == "variables":
+    elif choice == "variables":
         var()
 
 if __name__ == '__main__':
     programs()
 
 # "if __name___" function tells IDE that this script is for execution and not for importing into other files
+
