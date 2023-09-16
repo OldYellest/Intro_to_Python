@@ -37,3 +37,21 @@ def num():
     print(f'{3} to the power of {4} is: {3 ** 4}')
 
 # Both methods produce "power of" math
+
+# a += b -> a = a + b
+# a -= b -> a = a - b
+# a *= b -> a = a * b
+# a /= b -> a = a / b
+# a %= b -> a = a % b
+# a **= b -> a = a ** b
+
+def addrange():
+    start = int(input('Which number do you want to start from?\n- '))
+    end = int(input('Which number do you want to end at?\n- '))
+
+    total = 0
+
+    for number in range(start, end + 1):
+        total += number
+
+    print(f'The sum of the numbers between {start} and {end} is: {total}')
