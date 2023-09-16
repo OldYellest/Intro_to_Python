@@ -11,16 +11,29 @@ from length import length
 from captial import capital
 from lower import lower
 from stringex import excount, saw, glue
+from bool import numcheck, yearcheck, primecheck
 
-# from and imports only 'activate' once given function in script that refrences it
+# from and imports only 'activate' once given function in script that references it
 # Otherwise, function causes error
 def main():
     print('Hello, World!!!')
 def programs():
-    program = (f"""Choose from the following programs: "capital", "for_while", "in_op", "index", "inputs", 
-    'list', 'lower', 'length', 'main', 'numbers', 'plus', 'range', 'stringex', 'variables'""")
+    program = (f"""Choose from the following programs:\n ~ bool, capital, for_while, in_op, index,\n ~ inputs, list, lower, length, main,\n ~ numbers, plus, range, stringex, variables""")
     print(program)
     choice = input(f'Select a program from the list above: ')
+
+    if choice == "bool":
+        c1r = input(f'Choose: numcheck, yearcheck, primecheck: ')
+        if c1r == "numcheck":
+            numcheck()
+        elif c1r == "yearcheck":
+            yearcheck()
+        elif c1r == "primecheck":
+            primecheck()
+        #if c1r == "whileloop":
+         #   whileloop()
+        else:
+            return
 
     if choice == "capital":
         capital()
