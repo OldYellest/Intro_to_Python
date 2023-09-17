@@ -1,5 +1,5 @@
-# bug-free-sniffles
-Hello World compliation
+# Intro_to_Python
+Introductory Python program and functions compliation
 This is the "Phyton Code Example Handbook" from FreeCodeAcademy,
 mixed in with my own additions and differences to learn python and coding as I go along.
 
