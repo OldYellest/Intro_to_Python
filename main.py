@@ -7,6 +7,7 @@ from inputs import inputs
 from length import length
 from list import lists
 from lower import lower
+from map import books, view
 from numbers import num, addrange
 from plus import plus, mult
 from range import ex1range, ex2range
@@ -14,16 +15,24 @@ from rpg import skills, castle, opposite
 from setex import ex1, ex2, ex3
 from stringex import excount, saw, glue
 from variables import var
+import textwrap
 
 # from and imports only 'activate' once given function in script that references it
 # Otherwise, function causes error
 def main():
     print('Hello, World!!!')
 def programs():
-    program = (f"""Choose from the following programs:\n ~ bool, capital, for_while, in_op,\n ~ index, inputs, list, lower, length,\n ~ main, numbers, plus, range, rpg,\n ~ setex, stringex, variables""")
-    print(program)
-    choice = input(f'Select a program from the list above: ')
 
+    files = "bool, capital, for_while, in_op, index, inputs, length, list, lower,\
+             main, map, numbers, plus, range, rpg, setex, stringex, variables "
+
+    print(f"Choose from the following programs:\n")
+
+    print(textwrap.fill(files, 40))
+
+def execute():
+
+    choice = input(f'\nSelect a program from the list above: ')
 
     if choice == "bool":
         c1r = input(f'Choose: numcheck, yearcheck, primecheck: ')
@@ -71,11 +80,18 @@ def programs():
     elif choice == "main":
         main()
 
+    elif choice == "map":
+        c1r = input(f'Choose: books, view: ')
+        if c1r == "books":
+            books()
+        elif c1r == "view":
+            view()
+
     elif choice == "numbers":
         c1r = input(f'Choose: num, addrange: ')
         if c1r == "num":
             num()
-        if c1r == "addrange":
+        elif c1r == "addrange":
             addrange()
 
     elif choice == "plus":
@@ -122,8 +138,13 @@ def programs():
     elif choice == "variables":
         var()
 
+    else:
+        print("Sorry, please try again.")
+        execute()
+
 if __name__ == '__main__':
     programs()
+    execute()
 
 # "if __name___" function tells IDE that this script is for execution and not for importing into other files
 
